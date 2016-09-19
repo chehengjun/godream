@@ -16,7 +16,7 @@ func main() {
 	global.ConfigFile = global.LoadConfigFile(*fp)
 	global.SelfConfig = global.LoadSelfConfig(global.ConfigFile)
 
-	// 处理Http||Https[get|post|put|delete]等请求
+	// 处理Http(s)[get|post|put|delete]等请求
 	router := gin.Default()
 	httprequest.GetRouter(router)
 	httprequest.PostRouter(router)
