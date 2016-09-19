@@ -19,14 +19,13 @@ gin来练练手了。
 db层采用rpc通讯，进行请求，即db层采用rpc的服务端以及business层采用rpc的客户端。
 
 &emsp;&emsp;golang的基础知识及如何搭建golang开发环境及web开发知识，请自行脑补，自行百度了。首
-先开始business层的介绍。主函数main启动，读取配置文件，启动web服务，处理ui客户端的http
-(s)请求，将所有的http(s)请求归为get，post，put，delete等，即对应httprequest包中的
-getroute，postroute，putroute，putroute。每一种route管理着若干个handler，每一个
-handler对应着一个业务处理函数，即若添加一个新功能，先判断该功能对应的是何种http(s)请求，
-再在对应的route中增加一个对应的handler处理函数即可。源码见business中的httprequest包，
-照着抄即可，无须太多的知识。如果涉及数据库的相关操作，就作为客户端向db层发请求即可。一句
-话概括business层就是接受ui层客户端的请求，如果business自己能处理就处理，如果不能处理，
-需要db层的相关数据，就将ui层客户端的请求在business层作为rpc的客户端向db层进行转发，
+先开始business层的介绍。主函数main启动，读取配置文件，启动web服务，处理ui客户端的http(s)请求，
+将所有的http(s)请求归为get，post，put，delete等，即对应httprequest包中的getroute，postroute，
+putroute，putroute。每一种route管理着若干个handler，每一个handler对应着一个业务处理函数，
+即若添加一个新功能，先判断该功能对应的是何种http(s)请求，再在对应的route中增加一个对应的handler
+处理函数即可。源码见business中的httprequest包，照着抄即可，无须太多的知识。如果涉及数据库的相关操作，
+就作为客户端向db层发请求即可。一句话概括business层就是接受ui层客户端的请求，如果business自己能处理就处理，
+如果不能处理，需要db层的相关数据，就将ui层客户端的请求在business层作为rpc的客户端向db层进行转发，
 获取返回数据进行组装成预定的数据格式返回给ui层。详细的business的代码组织结构见business
 目录，无须再多言了。
 
