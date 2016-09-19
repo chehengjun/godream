@@ -1,6 +1,6 @@
 # golang的web开发之后端架构篇
 
-&emsp 闲来无事，玩玩golang，玩玩web了。计林一直盛传ruby的ruby on rails乃web开发之王，
+&emsp; 闲来无事，玩玩golang，玩玩web了。计林一直盛传ruby的ruby on rails乃web开发之王，
 未能有幸见之，python的小巧异步高性能web框架tornado到是有所了解，动态脚本语言开发的高效，
 五花八门的三方库，让胶水之王的python在各个领域都占有一席之地。玩了一下golang之后，仅对比
 web开发的后端，golang比python自我感觉确实有过之，而无不及呢，呵呵，各位python粉别喷我了。
@@ -10,7 +10,7 @@ web开发的后端，golang比python自我感觉确实有过之，而无不及�
 可别问我为什么这么分，问了我也不知道。ui层归为前端，不在本文讨论范围之内，因为我也不会前端，
 business层和db层归为后端，是本文讨论的重点。
   
-&emsp 既然是golang的web开发，当然得选个web开发框架，无须自己再造轮子了。选哪个好呢？这个我
+&emsp; 既然是golang的web开发，当然得选个web开发框架，无须自己再造轮子了。选哪个好呢？这个我
 也不知道呢，就选个gin呢！为什么选gin呢？网上都说gin的效率最高呢？于是乎我也就信了，那就拿
 gin来练练手了。
   
