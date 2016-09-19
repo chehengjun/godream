@@ -1,0 +1,4 @@
+curl -XGET -v "http://192.168.40.129:5011/get"
+curl -XPUT -v "http://192.168.40.129:5011/put"
+curl -XPOST -v "http://192.168.40.129:5011/post"
+curl -XDELETE -v "http://192.168.40.129:5011/delete"
